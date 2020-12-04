@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="../../css/paginado.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+    </head>
+    <body onload="calcularEdad()">
+        <div id=content>
+            <h1> Alberto Delgado Estárico</h1>
+            <p>Tengo <span id="edad"></span> años y soy estudiante de 2º de DAW. He estudiado durante dos años en Ingeniería Informática (Computer Science) en la Universidad de Málaga.
+            </p>
+            <p>También trabajo como redactor en <a href="https://fullesports.com/author/zackros" target="_blank"><img src="../../media/tabwindows_81023.png"> Full Esports</a>, una web de noticias sobre Esports basada en WordPress</p>
+
+            <p>Contacto: alberto6est@gmail.com</p>
+        </div>
+    </body>
+    <script>
+        var naci = new Date(1998, 10, 1); //Mi fecha de nacimiento
+        function calcularEdad()
+        {
+            var d = new Date()                              //fecha actual
+            var c = d.getFullYear() - naci.getFullYear();   //resta años
+            if(d.getMonth()<naci.getMonth())                //comprueba el mes en el que estamos 
+            {                                               //Nací un 1, así que no hace falta el día 
+                c--;
+            }
+        document.getElementById("edad").innerHTML = c;      //agrega la edad al span con id "edad"
+
+        }
+    </script>
+</html>

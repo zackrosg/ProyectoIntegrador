@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="css.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+</head>
+
+<body onload="setHora()">
+    <div id="flextenido">
+        <svg id="svgReloj">
+            <circle cx="50%" cy="50%" r="calc(50% - 1px)" stroke="black" fill="white" stroke-width="0.5px"></circle>
+            <line id="segundero" class="animacion segundos " x1="50%" y1="50%" x2="50%" y2="1"
+                style="stroke: rgb(255, 0, 0); stroke-width: 0.1vmin; animation-delay: -4s;"></line>
+            <line id="minutero" class="animacion minutos linear" x1="50%" y1="50%" x2="50%" y2="10%"
+                style="stroke: rgb(0, 4, 255); stroke-width: 0.2vmin; animation-delay: -2284s;"></line>
+            <line id="hora" class="animacion horas linear" x1="50%" y1="50%" x2="50%" y2="24%"
+                style="stroke: rgb(37, 185, 0); stroke-width: 0.2vmin; animation-delay: -2284s;"></line>
+
+
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="8%" style="transform: rotate(0deg)"></line><text
+                class="centro" x="50.00000000000001%" y="13%">12</text>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(6deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(12deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(18deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(24deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="8%" style="transform: rotate(30deg)"></line><text
+                class="centro" x="68.5%" y="17.957060059975767%">1</text>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(36deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(42deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(48deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(54deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="8%" style="transform: rotate(60deg)"></line><text
+                class="centro" x="82.04293994002423%" y="31.499999999999993%">2</text>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(66deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(72deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(78deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(84deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="8%" style="transform: rotate(90deg)"></line><text
+                class="centro" x="87%" y="50%">3</text>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(96deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(102deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(108deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(114deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="8%" style="transform: rotate(120deg)"></line><text
+                class="centro" x="82.04293994002424%" y="68.5%">4</text>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(126deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(132deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(138deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(144deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="8%" style="transform: rotate(150deg)"></line><text
+                class="centro" x="68.5%" y="82.04293994002424%">5</text>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(156deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(162deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(168deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(174deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="8%" style="transform: rotate(180deg)"></line><text
+                class="centro" x="50%" y="87%">6</text>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(186deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(192deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(198deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(204deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="8%" style="transform: rotate(210deg)"></line><text
+                class="centro" x="31.499999999999993%" y="82.04293994002423%">7</text>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(216deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(222deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(228deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(234deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="8%" style="transform: rotate(240deg)"></line><text
+                class="centro" x="17.957060059975774%" y="68.50000000000001%">8</text>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(246deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(252deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(258deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(264deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="8%" style="transform: rotate(270deg)"></line><text
+                class="centro" x="13%" y="50%">9</text>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(276deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(282deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(288deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(294deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="8%" style="transform: rotate(300deg)"></line><text
+                class="centro" x="17.957060059975774%" y="31.499999999999993%">10</text>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(306deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(312deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(318deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(324deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="8%" style="transform: rotate(330deg)"></line><text
+                class="centro" x="31.49999999999999%" y="17.957060059975774%">11</text>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(336deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(342deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(348deg)"></line>
+            <line class="centro" x1="50%" y1="2%" x2="50%" y2="6%" style="transform: rotate(354deg)"></line>
+        </svg>
+    </div>
+</body>
+<script>
+    function setHora(hora) {
+        if (hora == undefined)
+            hora = new Date();
+
+
+        let str;
+        str = -hora.getSeconds() + 's'
+        document.getElementById("segundero").style.animationDelay = str;
+        str = -((hora.getMinutes() * 60) + hora.getSeconds()) + 's';
+        document.getElementById("minutero").style.animationDelay = str;
+        if (hora.getHours() >= 12)
+            str = -(((hora.getHours() - 12) * 3600) + hora.getMinutes() * 60 + hora.getSeconds()) + 's';
+        else
+            str = -(((hora.getHours()) * 3600) + hora.getMinutes() * 60 + hora.getSeconds()) + 's';
+        document.getElementById("hora").style.animationDelay = str;
+
+    }
+
+</script>
+
+<body>
+</body>
+
+</html>

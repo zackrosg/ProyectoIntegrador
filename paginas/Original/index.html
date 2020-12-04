@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="css.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+
+<body>
+    <div id="header" class="transHead">
+        <div id="buttons" class="transHead">
+            <div class="boton transHead">
+                <div class="btn-inside noselect transHead">Inicio</div>
+
+            </div>
+            <div class="boton transHead">
+                <div class="btn-inside noselect transHead">Quien soy</div>
+            </div>
+            <div class="boton transHead display">
+                <div class="btn-inside noselect transHead">Proyectos</div>
+                <div class="btn-display transHead">
+                    <div class="btn-drop noselect transHead" onclick="pulsado(this); cambiar('../calculadorav2')"> Calculadora</div>
+                    <div class="btn-drop noselect transHead" onclick="pulsado(this);cambiar('../relojv2')" > Reloj</div>
+                    <div class="btn-drop noselect transHead" onclick="pulsado(this);cambiar('../gameoflife')"> Juego de la vida</div>
+                </div>
+            </div>
+            
+            <div class="boton transHead">
+                <div class="btn-inside noselect">Contacto</div>
+            </div>
+        </div>
+        <div id="title"> <div class="transHead">Curriculum Vitae</div></div>
+    </div>
+    <div id="content" class="transHead">
+      <iframe id="frame-page" src=""></iframe>
+    </div>
+</body>
+    <script>
+        function pulsado(ele)
+        {
+            let itb = document.getElementsByClassName("btn-drop");
+            for(let i = 0; i < itb.length; i++)
+            {
+                itb[i].classList.remove("clicked");
+            }
+            ele.classList.add("clicked");
+        }
+        function cambiar(src)
+        {
+            document.getElementById("frame-page").src = src;
+        }
+       
+    </script>
+</html>

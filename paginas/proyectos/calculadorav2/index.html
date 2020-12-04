@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link href="./otro.css" rel="stylesheet" type="text/css">
+
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+
+<body>
+  <div id="calculadora" style="height: 741.667;">
+    <div id="space">
+      <div id="resultado">
+        <div id="operaciones">
+          <div id="opcode" class="texto left">99*6</div>
+        </div>
+        <div id="total">
+          <div id="tota" class="texto right">18</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="pad">
+      <table class="tg">
+        <tbody>
+          <tr>
+            <td class="tg-0lax" onclick="pon(7)">7</td>
+            <td class="tg-0lax" onclick="pon(8)">8</td>
+            <td class="tg-0lax" onclick="pon(9)">9</td>
+            <td class="tg-0lax" onmousedown="pon('<')">&lt;</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax" onclick="pon(4)">4</td>
+            <td class="tg-0lax" onclick="pon(5)">5</td>
+            <td class="tg-0lax" onclick="pon(6)">6</td>
+            <td class="tg-0lax" onclick="pon('*')">*</td>
+
+          </tr>
+          <tr>
+            <td class="tg-0lax" onclick="pon(1)">1</td>
+            <td class="tg-0lax" onclick="pon(2)">2</td>
+            <td class="tg-0lax" onclick="pon(3)">3</td>
+            <td class="tg-0lax" onclick="pon('-')">-</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax" onclick="pon(0)">0</td>
+            <td class="tg-0lax" onclick="pon('.')">.</td>
+            <td class="tg-0lax" onclick="operar(str)">=</td>
+            <td class="tg-0lax" onclick="pon('+')">+</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <script>
+    var resultado = 0;
+    var str = '';
+    var asdf = [2, 4, 6, 7, 3, 5];
+
+
+    function pon(e) {
+      if (e != '<')
+        str = str + e;
+      else
+        str = str.substring(0, str.length - 1);
+
+      console.log(str.length);
+      pintarOp(str);
+    }
+
+    function operar(string) {
+      let operaciones = [];
+      let numeros = [];
+      let numAux = '';
+      let reg = new RegExp('[0-9]');
+      let op = new RegExp('[*+-]');
+      for (let i = 0; i <= string.length; i++) {
+        if (i == string.length) {
+          numeros.push(numAux);
+          // console.log(i + ' == ' + string.length);
+        }
+        if (reg.test(string[i]))
+          numAux += string[i];
+        else if (string[i] == '-' && numAux == '')
+          numAux += '-';
+        else if (string[i] == '+' && numAux == '')
+          numAux += '';
+        else if (string[i] == '.')
+          numAux += '.';
+        else if (op.test(string[i])) {
+          if (string[i] == '-') {
+            operaciones.push("+");
+            numeros.push(numAux);
+            numAux = '-';
+          } else {
+            operaciones.push(string[i]);
+            numeros.push(numAux);
+            numAux = '';
+          }
+        }
+      }
+      for (let i = 0; i < numeros.length; i++) {
+        numeros[i] = parseFloat(numeros[i]);
+      }
+      while (esta("[*]", operaciones)) {
+        for (let i = 0; i < operaciones.length; i++) {
+          if (operaciones[i] == '*') {
+            numeros[i] = numeros[i] * numeros[i + 1];
+            operaciones = quitar(i, operaciones);
+            numeros = quitar(i + 1, numeros);
+            console.log(numeros);
+          }
+        }
+      }
+      while (esta("[+]", operaciones))
+        for (let i = 0; i < operaciones.length; i++) {
+          if (operaciones[i] == '+') {
+            numeros[i] = numeros[i] + numeros[i + 1];
+            operaciones = quitar(i, operaciones);
+            numeros = quitar(i + 1, numeros);
+            console.log(numeros);
+          }
+        }
+      pintarRes(Math.round(numeros[0] * 1000) / 1000);
+
+    }
+    function pintarOp(string) {
+      document.getElementById("opcode").innerHTML = string;
+    }
+    function pintarRes(string) {
+      document.getElementById("tota").innerHTML = string;
+    }
+    function quitar(ind, arr) {
+      let aux = [];
+      let iaux = 0;
+      for (let i = 0; i < arr.length - 1; i++) {
+        if (ind == i) {
+          iaux++;
+        }
+        aux[i] = arr[iaux];
+        iaux++;
+      }
+      return aux;
+    }
+    function esta(rege, arr) {
+      let re = new RegExp(rege);
+      let es = false;
+      for (let i = 0; i < arr.length; i++)
+        if (re.test(arr[i]))
+          es = true;
+      return es;
+    }
+
+
+
+  </script>
+
+
+
+</body>
+
+</html>
