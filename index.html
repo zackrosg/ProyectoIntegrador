@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+    <link href="./css/index.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta charset="UTF-8">
+</header>
+
+<body>
+    <div id="header">
+        <div class="htext">
+            <h1>Proyecto CV virtual</h1>
+        </div>
+    </div>
+    <div id="secondHeader">
+
+        <div id="links">
+            <a href="./index.html">Home</a>
+            <a href="./paginas/ejercicios.html">Ejercicios</a>
+            <a href="./paginas/proyectos.html">Proyectos</a>
+            <a href="./paginas/lorem.html">Lorem Ipsum</a>
+        </div>
+
+    </div>
+    <div id="contenido">
+        <p>
+            Me llamo Alberto Delgado. Tengo 22 años y soy estudiante de 2º de DAW. He estudiado durante dos años en
+            Ingeniería Informática (Computer Science) en la Universidad de Málaga.
+        </p>
+        <p>También trabajo como redactor en <a href="https://fullesports.com/author/zackros" target="_blank"> Full Esports</a>, una web de noticias sobre Esports basada en WordPress</p>
+
+        <p>El objetivo de la página web es conocer mi perfil profesional y ver mis aptitudes, capacidades y
+            conocimientos sobre el desarrollo web en el entorno cliente, por lo que está dirigida a posibles empresarios
+            que busquen crear su propia web.</p>
+
+        <p> Para cumplir mi objetivo. En esta pagina predominará un estilo sencillo que sea fácil de entender y
+            visualizar.</p>
+        <p>
+            El proyecto está rehecho de nuevo usando un diseño más simple que el anterior debido a que no estaba
+            satisfecho personalmente con el resultado.
+        </p>
+        </p>
+    </div>
+    <input id="arrow" type="checkbox">
+    <label for="arrow">
+        <div id="toggle">
+            <div id="iToggle" class="help">
+                <div class="htext noSelect">X</div>
+            </div>
+        </div>
+    </label>
+    <div id="ayuda">
+        <div class="help">
+            <div class="htext noSelect">?</div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+</body>
+<script>
+
+    window.addEventListener("keydown", function (e) {
+        if (e.keyCode === 112) { //LEE el código de la telca
+            document.getElementById("arrow").click();
+            e.preventDefault(); //ignora los shortcuts de chrome
+        }
+    })
+
+</script>
+
+</html>

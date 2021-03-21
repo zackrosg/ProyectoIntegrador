@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+    <link href="../css/index.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta charset="UTF-8">
+</header>
+
+<body>
+    <div id="header">
+        <div class="htext">
+            <h1>Proyecto CV virtual</h1>
+        </div>
+    </div>
+    <div id="secondHeader">
+
+        <div id="links">
+            <a href="../index.html">Home</a>
+            <a href="./ejercicios.html">Ejercicios</a>
+            <a href="./proyectos.html">Proyectos</a>
+            <a href="./lorem.html">Lorem Ipsum</a>
+        </div>
+
+    </div>
+    <div id="contenido">
+        <div id="ejercicios">
+            <div class="tarjetaEj" onclick="window.open('./ejercicios/DOMjQuery.html', '_self')">
+                <div class="title">
+                    <div class="htext">Modificar DOM - jQuery</div> 
+                </div>
+                <div class="description">
+                    Cambiar el DOM con funciones de javascript que incluyen jQuery
+                </div>
+            </div>
+            <div class="tarjetaEj" onclick="window.open('./ejercicios/f1help.html', '_self')">
+                <div class="title">
+                    <div class="htext">Ayuda en F1</div> 
+                </div>
+                <div class="description">
+                    Código para iniciar la ayuda en F1
+                </div>
+            </div>
+            <div class="tarjetaEj" onclick="window.open('./ejercicios/primo.html', '_self')">
+                <div class="title">
+                    <div class="htext">Comprobar primo</div> 
+                </div>
+                <div class="description">
+                    Funcion que comprueba si un numero es primo
+                </div>
+            </div>
+            <div class="tarjetaEj" onclick="window.open('./ejercicios/modoNoche.html', '_self')">
+                <div class="title">
+                    <div class="htext"> Modo Noche</div> 
+                </div>
+                <div class="description">
+                    Aplicación para probar un modo noche
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <input id="arrow" type="checkbox">
+    <label for="arrow">
+        <div id="toggle">
+            <div id="iToggle" class="help">
+                <div class="htext noSelect">X</div>
+            </div>
+        </div>
+    </label>
+    <div id="ayuda">
+        <div class="help">
+            <div class="htext noSelect">?</div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+</body>
+<script>
+
+    window.addEventListener("keydown", function (e) {
+        if (e.keyCode === 112) { //LEE el código de la telca
+            document.getElementById("arrow").click();
+            e.preventDefault(); //ignora los shortcuts de chrome
+        }
+    })
+
+</script>
+
+</html>

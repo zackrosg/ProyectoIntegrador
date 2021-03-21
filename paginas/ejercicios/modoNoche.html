@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+    <link href="../../css/index.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta charset="UTF-8">
+</header>
+
+<body>
+    <div id="header">
+        <div class="htext">
+            <h1>Proyecto CV virtual</h1>
+        </div>
+    </div>
+    <div id="secondHeader">
+
+        <div id="links">
+            <a href="../../index.html">Home</a>
+            <a href="../ejercicios.html">Ejercicios</a>
+            <a href="../proyectos.html">Proyectos</a>
+            <a href="../Lorem.html">Lorem Ipsum</a>
+        </div>
+
+    </div>
+    <div id="contenido">
+        <div>
+            Tremebundísima cantidad de texto autogenerado: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum
+        </div>
+        <div id="virus" onclick="virus()">
+            <img src="/pintegrado/media/descargadoge.jfif">
+            <div id="imgContent">
+                Totally not a virus. Trust me... i'm a dog
+            </div>
+
+        </div>
+        
+        código
+        <pre>
+            <code>
+            var modoNoche = false;
+
+            function virus() {
+
+                if (modoNoche) {
+                    $("#contenido").css({
+                        "background-color": "white",
+                        "color": "black"
+
+                    });
+                    modoNoche = false;
+                } else {
+                    $("#contenido").css({
+                        "background-color": "#4B4B4B",
+                        "color": "#FFFFFF"
+                    });
+                    modoNoche = true;
+                }
+            }
+            </code>
+        </pre>
+        <script>
+            var modoNoche = false;
+
+            function virus() {
+
+                if (modoNoche) {
+                    $("#contenido").css({
+                        "background-color": "white",
+                        "color": "black"
+
+                    });
+                    modoNoche = false;
+                } else {
+                    $("#contenido").css({
+                        "background-color": "#4B4B4B",
+                        "color": "#FFFFFF"
+                    });
+                    modoNoche = true;
+                }
+            }
+
+        </script>
+        <style>
+            #virus img {
+                width: 80%;
+                padding: 0;
+                margin: 0 10%;
+                border-radius: 12px;
+                -webkit-user-select: none;
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-drag: none;
+            }
+
+            #imgContent {
+                margin: 0 10%;
+                -webkit-user-select: none;
+                user-select: none;
+                -moz-user-select: none;
+            }
+
+            #virus {
+                margin: 10px auto;
+                width: calc(5vw + 50px);
+                border: 1px solid rgba(0, 0, 0, 0);
+                border-radius: 4px;
+            }
+
+            #virus:hover {
+                border: 1px solid gray;
+                background-color: rgb(230, 228, 228);
+                cursor: pointer;
+            }
+
+            #virus:hover #imgContent {
+                color: black;
+            }
+
+            #virus:hover img {
+                background-color: gray;
+            }
+        </style>
+    </div>
+    <input id="arrow" type="checkbox">
+    <label for="arrow">
+        <div id="toggle">
+            <div id="iToggle" class="help">
+                <div class="htext noSelect">X</div>
+            </div>
+        </div>
+    </label>
+    <div id="ayuda">
+        <div class="help">
+            <div class="htext noSelect">?</div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+</body>
+<script>
+
+    window.addEventListener("keydown", function (e) {
+        if (e.keyCode === 112) { //LEE el código de la telca
+            document.getElementById("arrow").click();
+            e.preventDefault(); //ignora los shortcuts de chrome
+        }
+    })
+
+</script>
+
+</html>

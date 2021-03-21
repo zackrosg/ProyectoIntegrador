@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+    <link href="../../css/index.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta charset="UTF-8">
+</header>
+
+<body>
+    <div id="header">
+        <div class="htext">
+            <h1>Proyecto CV virtual</h1>
+        </div>
+    </div>
+    <div id="secondHeader">
+
+        <div id="links">
+            <a href="../../css/index.css"></a>Home</a>
+            <a href="../ejercicios.html">Ejercicios</a>
+            <a href="../proyectos.html">Proyectos</a>
+            <a href="../Lorem.html">Lorem Ipsum</a>
+        </div>
+
+    </div>
+    <div id="contenido">
+        <div>
+            <pre><code>
+                Aquí el código usado:
+                function cambiar()
+                {
+                    $("#cnt-ej").css("font-size", $("#range-size").val() + "px");
+                    $("#cnt-ej").css("background-color","blue");
+                    $("#ej-tam").html($("#range-size").val())
+                }
+            </code></pre>
+        </div>
+        <input id="range-size" type="range" min="10" max="50" onchange="cambiar()">
+        <div id="cnt-ej">
+            Estas palabras son modificables en tamaño (tamaño actual: <span id="ej-tam">16</span>)
+        </div>
+
+
+        <script>
+            function cambiar() {
+                $("#cnt-ej").css("font-size", $("#range-size").val() + "px");
+                $("#cnt-ej").css("background-color", "blue");
+                $("#ej-tam").html($("#range-size").val())
+            }
+        </script>
+    </div>
+    <input id="arrow" type="checkbox">
+    <label for="arrow">
+        <div id="toggle">
+            <div id="iToggle" class="help">
+                <div class="htext noSelect">X</div>
+            </div>
+        </div>
+    </label>
+    <div id="ayuda">
+        <div class="help">
+            <div class="htext noSelect">?</div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+</body>
+<script>
+
+    window.addEventListener("keydown", function (e) {
+        if (e.keyCode === 112) { //LEE el código de la telca
+            document.getElementById("arrow").click();
+            e.preventDefault(); //ignora los shortcuts de chrome
+        }
+    })
+
+</script>
+
+</html>

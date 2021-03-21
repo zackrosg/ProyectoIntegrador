@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+    <link href="/pintegrado/css/index.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta charset="UTF-8">
+</header>
+
+<body>
+    <div id="header">
+        <div class="htext">
+            <h1>Proyecto CV virtual</h1>
+        </div>
+    </div>
+    <div id="secondHeader">
+
+        <div id="links">
+            <a href="../index.html">Home</a>
+            <a href="./ejercicios.html">Ejercicios</a>
+            <a href="./proyectos.html">Proyectos</a>
+            <a href="./Lorem.html">Lorem Ipsum</a>
+
+        </div>
+
+    </div>
+    <div id="contenido">
+        <div id="ejercicios">
+            <div class="tarjetaEj" onclick="window.open('./proyectos/calculadora.html', '_self' )">
+                <div class="title">
+                    <div class="htext">Calculadora</div>
+                </div>
+                <div class="description">
+                    Calculadora usando javascript
+                </div>
+            </div>
+            <div class="tarjetaEj" onclick="window.open('./proyectos/reloj.html', '_self' )">
+                <div class="title">
+                    <div class="htext">Reloj CSS</div>
+                </div>
+                <div class="description">
+                    Reloj hecho en puro css (js para asignar la hora)
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <input id="arrow" type="checkbox">
+    <label for="arrow">
+        <div id="toggle">
+            <div id="iToggle" class="help">
+                <div class="htext noSelect">X</div>
+            </div>
+        </div>
+    </label>
+    <div id="ayuda">
+        <div class="help">
+            <div class="htext noSelect">?</div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+</body>
+<script>
+
+    window.addEventListener("keydown", function (e) {
+        if (e.keyCode === 112) { //LEE el código de la telca
+            document.getElementById("arrow").click();
+            e.preventDefault(); //ignora los shortcuts de chrome
+        }
+    })
+
+</script>
+
+</html>

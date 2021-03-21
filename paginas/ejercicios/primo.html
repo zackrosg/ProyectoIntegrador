@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+    <link href="../../css/index.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta charset="UTF-8">
+</header>
+
+<body>
+    <div id="header">
+        <div class="htext">
+            <h1>Proyecto CV virtual</h1>
+        </div>
+    </div>
+    <div id="secondHeader">
+
+        <div id="links">
+            <a href="../../index.html">Home</a>
+            <a href="../ejercicios.html">Ejercicios</a>
+            <a href="../proyectos.html">Proyectos</a>
+            <a href="../Lorem.html">Lorem Ipsum</a>
+        </div>
+
+    </div>
+    <div id="contenido">
+        <div id="exe">
+            Ingresa un número y te diré si es primo:
+            <input type="number" min="0" max="500" onchange="calcularPrimo(this.value)">
+            <div id="result"></div>
+        </div>
+        código:
+        <pre>
+            <code>
+                function calcularPrimo(n) {
+                    let a = parseInt(n);
+                    if (a <= 500 && a > 0) {
+                        console.log("hey jude");
+                        let es = true;
+                        if (a % 2 == 0) es = false;
+                        for (let itbe = 3; es && itbe < a / 2; itbe = itbe + 2)
+                            if (a % itbe == 0) es = false;
+                        if (es) document.getElementById('result').innerHTML = "Es primo";
+                        else document.getElementById('result').innerHTML = "No es primo";
+            
+            
+            
+                    }
+                }
+            </code>
+        </pre>
+    </div>
+    <input id="arrow" type="checkbox">
+    <label for="arrow">
+        <div id="toggle">
+            <div id="iToggle" class="help">
+                <div class="htext noSelect">X</div>
+            </div>
+        </div>
+    </label>
+    <div id="ayuda">
+        <div class="help">
+            <div class="htext noSelect">?</div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+</body>
+<script>
+
+    window.addEventListener("keydown", function (e) {
+        if (e.keyCode === 112) { //LEE el código de la telca
+            document.getElementById("arrow").click();
+            e.preventDefault(); //ignora los shortcuts de chrome
+        }
+    })
+
+    function calcularPrimo(n) {
+        let a = parseInt(n);
+        if (a <= 500 && a > 0) {
+            console.log("hey jude");
+            let es = true;
+            if (a % 2 == 0) es = false;
+            for (let itbe = 3; es && itbe < a / 2; itbe = itbe + 2)
+                if (a % itbe == 0) es = false;
+            if (es) document.getElementById('result').innerHTML = "Es primo";
+            else document.getElementById('result').innerHTML = "No es primo";
+
+
+
+        }
+    }
+
+</script>
+
+</html>

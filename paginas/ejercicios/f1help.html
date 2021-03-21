@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+    <link href="../../css/index.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta charset="UTF-8">
+</header>
+
+<body>
+    <div id="header">
+        <div class="htext">
+            <h1>Proyecto CV virtual</h1>
+        </div>
+    </div>
+    <div id="secondHeader">
+
+        <div id="links">
+            <a href="../../css/index.css"></a>Home</a>
+            <a href="../ejercicios.html">Ejercicios</a>
+            <a href="../proyectos.html">Proyectos</a>
+            <a href="../Lorem.html">Lorem Ipsum</a>
+        </div>
+
+    </div>
+    <div id="contenido">
+        <p>
+          Al pulsar F1 debe desplegarse el botón de abajo 
+          Código: 
+          <pre><code>
+          window.addEventListener("keydown", function (e) {
+            if (e.keyCode === 112) { //LEE el código de la telca
+                document.getElementById("arrow").click();
+                e.preventDefault(); //ignora los shortcuts de chrome
+            }
+        })
+        </code></pre>
+        </p>
+    </div>
+    <input id="arrow" type="checkbox">
+    <label for="arrow">
+        <div id="toggle">
+            <div id="iToggle" class="help">
+                <div class="htext noSelect">X</div>
+            </div>
+        </div>
+    </label>
+    <div id="ayuda">
+        <div class="help">
+            <div class="htext noSelect">?</div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+</body>
+<script>
+
+    window.addEventListener("keydown", function (e) {
+        if (e.keyCode === 112) { //LEE el código de la telca
+            document.getElementById("arrow").click();
+            e.preventDefault(); //ignora los shortcuts de chrome
+        }
+    })
+
+</script>
+
+</html>

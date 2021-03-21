@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+    <link href="../../css/index.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta charset="UTF-8">
+</header>
+
+<body>
+    <div id="header">
+        <div class="htext">
+            <h1>Proyecto CV virtual</h1>
+        </div>
+    </div>
+    <div id="secondHeader">
+
+        <div id="links">
+            <a href="../../index.html">Home</a>
+            <a href="../ejercicios.html">Ejercicios</a>
+            <a href="../proyectos.html">Proyectos</a>
+            <a href="../Lorem.html">Lorem Ipsum</a>
+
+        </div>
+
+    </div>
+    <div id="contenido">
+        <iframe id="frame-page" src="/pintegrado/paginas/proyectos/relojv2"></iframe>
+    </div>
+
+
+
+    <input id="arrow" type="checkbox">
+    <label for="arrow">
+        <div id="toggle">
+            <div id="iToggle" class="help">
+                <div class="htext noSelect">X</div>
+            </div>
+        </div>
+    </label>
+    <div id="ayuda">
+        <div class="help">
+            <div class="htext noSelect">?</div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+</body>
+<script>
+
+    window.addEventListener("keydown", function (e) {
+        if (e.keyCode === 112) { //LEE el código de la telca
+            document.getElementById("arrow").click();
+            e.preventDefault(); //ignora los shortcuts de chrome
+        }
+        else if(e.keyCode>112 && e.keyCode <121)
+        {
+            document.getElementById("error").innerHTML = "Pulsa F1 para obtener la ayuda que solicita"
+        }
+        else
+        {
+            document.getElementById("error").innerHTML = "";
+        }
+    })
+
+</script>
+
+</html>
